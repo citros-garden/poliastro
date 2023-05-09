@@ -1,0 +1,13 @@
+poliastro_atmo_drag:
+  ros__parameters:
+    earth_r: 6378.1366
+    a: 6600.85876692
+    ecc: 0.0005480
+    inc: 51.6399
+    raan: 142.7584
+    argp: 17.8906
+    nu: 0.81325021
+    c_d: 2.2
+    t_limit: 1000.0
+    publish_freq: 10.0
+    

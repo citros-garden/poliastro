@@ -1,0 +1,5 @@
+poliastro_maneuver:
+  ros__parameters:
+    r_init: 100.0
+    r_final: 1000.0
+    
