@@ -1,0 +1,27 @@
+{
+  "paths": [
+    {
+      "value": "/poliastro_simple_orbit/state.data[0]",
+      "enabled": true,
+      "timestampMethod": "receiveTime",
+      "label": "Orbit trajectory between time limits"
+    }
+  ],
+  "showXAxisLabels": true,
+  "showYAxisLabels": true,
+  "showLegend": true,
+  "legendDisplay": "floating",
+  "showPlotValuesInLegend": false,
+  "isSynced": true,
+  "xAxisVal": "custom",
+  "sidebarDimension": 240,
+  "foxglovePanelTitle": "Poliastro simple orbit example plot",
+  "xAxisPath": {
+    "value": "/poliastro_simple_orbit/state.data[1]"
+  },
+  "title": "Plot",
+  "minXValue": -17000,
+  "maxXValue": 17000,
+  "minYValue": -17000,
+  "maxYValue": 17000
+}

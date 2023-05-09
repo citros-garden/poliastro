@@ -1,0 +1,27 @@
+{
+  "paths": [
+    {
+      "value": "/poliastro_maneuver/state.data[0]",
+      "enabled": true,
+      "timestampMethod": "receiveTime",
+      "label": "Hohmann maneuver orbits plot"
+    }
+  ],
+  "showXAxisLabels": true,
+  "showYAxisLabels": true,
+  "showLegend": true,
+  "legendDisplay": "floating",
+  "showPlotValuesInLegend": false,
+  "isSynced": true,
+  "xAxisVal": "custom",
+  "sidebarDimension": 240,
+  "foxglovePanelTitle": "Poliastro maneuver example plot",
+  "xAxisPath": {
+    "value": "/poliastro_maneuver/state.data[1]"
+  },
+  "title": "Plot",
+  "minYValue": -8000,
+  "maxYValue": 8000,
+  "minXValue": -8000,
+  "maxXValue": 8000
+}

@@ -3,6 +3,6 @@ poliastro_simple_orbit:
     apo_r: 10000.0
     peri_r: 10000.0
     start_t: "2022-01-01 00:00"
-    finish_t: "2022-01-01 02:00"
+    finish_t: "2022-01-01 05:00"
     publish_freq: 10.0
     
