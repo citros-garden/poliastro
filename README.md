@@ -73,9 +73,9 @@ Although you can get simulation results using FoxGlove, the best way to work wit
 # Extras
 
 ![gif](/docs/img/main.gif "Maneuver example")
+<br>
 Simple maneuver example
 <br>
 <br>
-<br>
-![png](/docs/img/simple_orbit.png "Maneuver example")
-Simple maneuver example
+![gif](/docs/img/simple_orbit.png "Simple orbit example")
+Simple orbit example
