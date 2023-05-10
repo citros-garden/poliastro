@@ -17,7 +17,7 @@ This project contains three simple examples using Poliastro lib for Python 3:
 1. Open project root folder in VS Code.
 2. Navigate to the lower-left corner of VS Code window and click on green mark.
 3. Select "Reopen in container" option in the list on the top of the VS Code window. Wait a minute while Docker container is starting.
-2. Open ```/src/<selected_example>/config/params.xml``` file to set parameters for simulation or just keep it default. Don't forget to save your changes!
+2. Open ```/src/<selected_example>/config/params.xml``` file to set parameters for simulation or just keep it default. Don't forget to save your changes! Check [docs folder](/docs/) for more info.
 3. Build ROS2 environment:
 ```bash 
 colcon build
@@ -77,5 +77,5 @@ Simple maneuver example
 <br>
 <br>
 <br>
-![gif](/docs/img/simple_orbit.png "Maneuver example")
+![png](/docs/img/simple_orbit.png "Maneuver example")
 Simple maneuver example
