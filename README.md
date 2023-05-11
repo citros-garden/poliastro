@@ -1,9 +1,13 @@
 ![gif](/docs/img/main.gif "Maneuver example")
 # General Information 🌍
 This project contains three simple examples using Poliastro lib for Python 3:
-1. `Poliastro_simple_orbit`. It returns vessel orbital coordinates around Earth between time bounds from input apoapsis and periapsis altitudes.
-2. `Poliastro_maneuver`. This package provides three orbits for the Hohmann transition: an initial orbit, an intermediate orbit, and a final orbit. Takes the radius of the initial orbit and the radius of the final orbit as input.
+1. `Poliastro_simple_orbit`. It returns vessel orbital coordinates around Earth between time bounds from input apoapsis and periapsis altitudes. The input parameters can be set in the [params.yaml config file](/src/poliastro_simple_orbit/config/params.yaml). The result is an ephemerides of orbit (actually a part of it between given time bounds) with zero right ascension of the ascending node, argument of the pericenter an true anomaly for simplicity. All the calculations defined in [util_simple_orbit.py file](/src/poliastro_simple_orbit/poliastro_simple_orbit/util_simple_orbit.py).
+Another important file is [poliastro_simple_orbit.py file](/src/poliastro_simple_orbit/poliastro_simple_orbit/poliastro_simple_orbit.py). ROS 2 node is used to call simulation function, get the results and publish it via ROS topic. You also can set publishing frequency (```publish_freq```) in the [params.yaml config file](/src/poliastro_simple_orbit/config/params.yaml) (more info about this file below).
+2. `Poliastro_maneuver`. This package provides three orbits for the Hohmann transition: an initial orbit, an intermediate orbit, and a final orbit. Takes the radius of the initial orbit and the radius of the final orbit as input. You will get the ephemerides of these orbits, not the trajectory! 
 3. `Poliastro_atmo_drag`. A simple example showing the effect of aerodynamic drag forces on an artificial satellite on low Earth orbit. Takes Earth diameter, drag coefficient, Keppler orbit parameters and maximum simulation time as inputs. The result is a plot of altitude by time and the flight time before hitting the surface.
+
+
+You can find more information about orbital mechanics simulations with Poliastro on [Poliastro official website](https://poliastro-py.readthedocs.io/en/latest/user_guide.html)
 
 # Installation 🛫
 1. Docker engine. This project runs inside Docker container, and requires Docker Engine/Docker Desktop. Follow the instructions on [Docker official website](https://www.docker.com/get-started/).
@@ -17,7 +21,7 @@ This project contains three simple examples using Poliastro lib for Python 3:
 1. Open project root folder in VS Code.
 2. Navigate to the lower-left corner of VS Code window and click on green mark.
 3. Select "Reopen in container" option in the list on the top of the VS Code window. Wait a minute while Docker container is starting.
-2. Open ```/src/<selected_example>/config/params.xml``` file to set parameters for simulation or just keep it default. Don't forget to save your changes! Check [docs folder](/docs/) for more info.
+2. Open ```/src/<selected_example>/config/params.xml``` file to set parameters for simulation or just keep it default. Don't forget to save your changes!
 3. Build ROS2 environment:
 ```bash 
 colcon build
