@@ -91,6 +91,8 @@ docker push us-central1-docker.pkg.dev/citros/lulav/poliastro
 ## Citros examples
 Some examples of data analysis and plots from Citros Notebooks:
 
+![png](/docs/img/citros0.png "Citros example")
+![png](/docs/img/citros1.png "Citros example")
 # Extras
 
 ![gif](/docs/img/main.gif "Maneuver example")
