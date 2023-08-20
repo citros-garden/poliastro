@@ -20,15 +20,15 @@ class poliastro_atmo_drag(Node):
         #Defining states  a, ecc, inc, raan, argp, nu, c_d, t_limit 6.3781366e6
         #Initial orbit parameters
         self.declare_parameter('earth_r', 6378136.6)
-        self.declare_parameter('a', 6600.85876692) 
+        self.declare_parameter('a', 6550.85876692) 
         self.declare_parameter('ecc', 0.0005480) 
-        self.declare_parameter('inc', 51.6399) 
-        self.declare_parameter('raan', 142.7584) 
-        self.declare_parameter('argp', 17.8906) 
-        self.declare_parameter('nu', 0.81325021) 
+        self.declare_parameter('inc', 0.0) 
+        self.declare_parameter('raan', 0.0) 
+        self.declare_parameter('argp', 0.0) 
+        self.declare_parameter('nu', 0.0) 
         self.declare_parameter('c_d', 2.2) 
 
-        self.declare_parameter('t_limit', 1000.0)
+        self.declare_parameter('t_limit', 100.0)
 
         self.declare_parameter('publish_freq', 10.0)   
 

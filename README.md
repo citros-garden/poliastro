@@ -71,9 +71,28 @@ ros2 launch <selected_example> launch.py
 # Citros usage 🛸
 Although you can get simulation results using FoxGlove, the best way to work with such simulations and process the results is Citros! With its power, it is possible to create complex data processing scenarios, including the construction of more complex graphs, mathematical analysis and other high-level processing methods.
 
-# Develope
+## Citros integration
+1. Build Docker image:
+```bash
+docker build -t poliastro .
+# OR *** when building from MAC M1 chip add FROM --platform=linux/amd64 ***
+docker buildx build --platform linux/amd64 -t poliastro .   
+```
+2. Login to Citros
+ ```bash
+citros login
+citros docker-login
+```
+3. Tag your project and push it into Citros cloud
+ ```bash
+docker tag spiceypy us-central1-docker.pkg.dev/citros/lulav/poliastro
+docker push us-central1-docker.pkg.dev/citros/lulav/poliastro
+```
+## Citros examples
+Some examples of data analysis and plots from Citros Notebooks:
 
-
+![png](/docs/img/citros0.png "Citros example")
+![png](/docs/img/citros1.png "Citros example")
 # Extras
 
 ![gif](/docs/img/main.gif "Maneuver example")
