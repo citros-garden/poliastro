@@ -2,6 +2,6 @@
 set -e
 
 source /opt/ros/humble/setup.bash
-source /app/install/setup.bash 
+source /workspaces/poliastro/install/setup.bash 
 
 exec "$@"

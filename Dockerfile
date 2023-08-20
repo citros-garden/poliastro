@@ -27,7 +27,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive  && apt-get install -y  --n
     ros-humble-rosbridge-suite \    
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install polisastro
+RUN python3 -m pip install poliastro
 
 RUN sudo apt-get update && apt-get install -y \
     ros-$ROS_DISTRO-rosbag2-storage-mcap \
@@ -38,13 +38,15 @@ RUN sudo apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/* 
 RUN  pip install mcap-ros2-support
 
-WORKDIR /app
-COPY . .
+WORKDIR /workspaces/poliastro
+COPY install install
+COPY ros2_entrypoint.sh ros2_entrypoint.sh
+COPY src src
 RUN colcon build
 
-RUN pip install citros==23.17.7
+RUN pip install citros
 
 RUN chmod +x ros2_entrypoint.sh
-ENTRYPOINT ["/app/ros2_entrypoint.sh"]
+ENTRYPOINT ["/workspaces/poliastro/ros2_entrypoint.sh"]
 
 CMD ["bash"]
