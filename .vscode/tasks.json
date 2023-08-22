@@ -29,21 +29,21 @@
         {
             "label": "launch simple orbit example",
             "type": "shell",
-            "command": "source install/local_setup.bash && ros2 launch poliastro_simple_orbit launch.py",
+            "command": "source install/local_setup.bash && ros2 launch poliastro_simple_orbit poliastro_simple_orbit.launch.py",
             "problemMatcher": [],
             "dependsOn": ["build"]
         },
         {
             "label": "launch maneuver example",
             "type": "shell",
-            "command": "source install/local_setup.bash && ros2 launch poliastro_maneuver launch.py",
+            "command": "source install/local_setup.bash && ros2 launch poliastro_maneuver poliastro_maneuver.launch.py",
             "problemMatcher": [],
             "dependsOn": ["build"]
         },
         {
             "label": "launch atmo_drag example",
             "type": "shell",
-            "command": "source install/local_setup.bash && ros2 launch poliastro_atmo_drag launch.py",
+            "command": "source install/local_setup.bash && ros2 launch poliastro_atmo_drag poliastro_atmo_drag.launch.py",
             "problemMatcher": [],
             "dependsOn": ["build"]
         },

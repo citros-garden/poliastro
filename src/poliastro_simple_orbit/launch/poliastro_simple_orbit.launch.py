@@ -15,20 +15,20 @@ class bcolors:
 
 def generate_launch_description():
     ld = LaunchDescription()
-    poliastro_atmo_drag_config = os.path.join(
-        get_package_share_directory('poliastro_atmo_drag'),
+    poliastro_simple_orbit_config = os.path.join(
+        get_package_share_directory('poliastro_simple_orbit'),
         'config',
         'params.yaml'
         )
-    poliastro_atmo_drag=Node(
-        package = 'poliastro_atmo_drag',
-        name = 'poliastro_atmo_drag',
-        executable = 'poliastro_atmo_drag',
-        parameters = [poliastro_atmo_drag_config]
+    poliastro_simple_orbit=Node(
+        package = 'poliastro_simple_orbit',
+        name = 'poliastro_simple_orbit',
+        executable = 'poliastro_simple_orbit',
+        parameters = [poliastro_simple_orbit_config]
     )
 
     sys_shut_down = RegisterEventHandler(OnProcessExit(
-    target_action=poliastro_atmo_drag,
+    target_action=poliastro_simple_orbit,
     on_exit=[
                 LogInfo(msg=(f'{bcolors.OKGREEN}The Scenario has ended!{bcolors.ENDC}')),
                 EmitEvent(event=Shutdown(
@@ -38,5 +38,5 @@ def generate_launch_description():
 
     bridge_dir = get_package_share_directory('rosbridge_server')
     bridge_launch =  IncludeLaunchDescription(launch_description_sources.FrontendLaunchDescriptionSource(bridge_dir + '/launch/rosbridge_websocket_launch.xml')) 
-    ld = LaunchDescription ([bridge_launch, poliastro_atmo_drag, sys_shut_down])
+    ld = LaunchDescription ([bridge_launch, poliastro_simple_orbit, sys_shut_down])
     return ld
