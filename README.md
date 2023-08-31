@@ -1,4 +1,4 @@
-![gif](/docs/img/main.gif "Maneuver example")
+![gif](/docs/img/main.gif "Maneuver example")ff
 # General Information 🌍
 This project contains three simple examples using Poliastro lib for Python 3:
 1. `Poliastro_simple_orbit`. It returns vessel orbital coordinates around Earth between time bounds from input apoapsis and periapsis altitudes. The input parameters can be set in the [params.yaml config file](/src/poliastro_simple_orbit/config/params.yaml). The result is an ephemerides of orbit (actually a part of it between given time bounds) with zero right ascension of the ascending node, argument of the pericenter an true anomaly for simplicity. All the calculations defined in [util_simple_orbit.py file](/src/poliastro_simple_orbit/poliastro_simple_orbit/util_simple_orbit.py).
