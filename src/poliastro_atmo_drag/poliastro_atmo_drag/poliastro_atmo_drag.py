@@ -43,6 +43,8 @@ class poliastro_atmo_drag(Node):
         
         self.t_limit = self.get_parameter('t_limit').get_parameter_value().double_value
 
+        self.get_logger().info(f"With Cd = {self.c_d}")
+
         # Defining encounter for publisher
         self.i = 0        
 
