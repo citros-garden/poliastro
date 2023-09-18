@@ -22,7 +22,7 @@ You can find more information about orbital mechanics simulations with Poliastro
 2. Navigate to the lower-left corner of VS Code window and click on green mark.
 3. Select "Reopen in container" option in the list on the top of the VS Code window. Wait a minute while Docker container is starting.
 2. Open ```/src/<selected_example>/config/params.xml``` file to set parameters for simulation or just keep it default. Don't forget to save your changes!
-3. Build ROS2 environment:
+3. Build ROS 2 environment:
 ```bash 
 colcon build
 ```
@@ -34,7 +34,7 @@ First of all, you need to download it from the [official website](https://foxglo
 
 Next step is connecting to your ROS node. To perform it, open FoxGlove Studio and select *__Open connection__* option, then select *__Rosbridge__* option. Check the *__WebSocket URL__* field on the right of the window, it should contain ```ws://localhost:9090```. Now we are almost ready to go!
 
-Last step is configuring the layout of FoxGlove. Navigate to the third tab on the left panel, and choose __*Plot*__ option. Each example has its unique ros2 publisher, so it's necessary to set Message paths in FoxGlove in advance. There are two ways to do it: using prepared layout file or manualy.
+Last step is configuring the layout of FoxGlove. Navigate to the third tab on the left panel, and choose __*Plot*__ option. Each example has its unique ROS 2 publisher, so it's necessary to set Message paths in FoxGlove in advance. There are two ways to do it: using prepared layout file or manualy.
 
 <details>
   <summary>To use prepared layout</summary>
@@ -62,7 +62,7 @@ OR
 # Run 🚀
 1. Go back to the VS Code.
 2. Prepare your FoxGlove studio (previous step, if you haven't done it yet).
-3. Launch selected ROS2 package:
+3. Launch selected ROS 2 package:
 ```bash 
 ros2 launch <selected_example> launch.py
 ```
