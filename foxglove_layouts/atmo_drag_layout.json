@@ -1,10 +1,10 @@
 {
   "paths": [
     {
-      "value": "/Poliastro_atmo_drag/state.data[0]",
+      "value": "/poliastro_maneuver/state.data[0]",
       "enabled": true,
       "timestampMethod": "receiveTime",
-      "label": "Orbit trajectory between time limits"
+      "label": "Hohmann maneuver orbits plot"
     }
   ],
   "showXAxisLabels": true,
@@ -15,9 +15,36 @@
   "isSynced": true,
   "xAxisVal": "custom",
   "sidebarDimension": 240,
-  "foxglovePanelTitle": "Poliastro simple orbit example plot",
+  "foxglovePanelTitle": "Poliastro maneuver example plot",
   "xAxisPath": {
-    "value": "/Poliastro_atmo_drag/state.data[1]"
+    "value": "/poliastro_maneuver/state.data[1]"
   },
-  "title": "Plot"
+  "title": "Plot",
+  "minYValue": -8000,
+  "maxYValue": 8000,
+  "minXValue": -8000,
+  "maxXValue": 8000,
+  "configById": {
+    "Plot!f0otus": {
+      "paths": [
+        {
+          "value": "/poliastro_atmo_drag/state.data[0]",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "custom",
+      "sidebarDimension": 240,
+      "xAxisPath": {
+        "value": "/poliastro_atmo_drag/state.data[1]"
+      }
+    }
+  },
+  "layout": "Plot!f0otus"
 }

@@ -22,7 +22,7 @@ You can find more information about orbital mechanics simulations with Poliastro
 2. Navigate to the lower-left corner of VS Code window and click on green mark.
 3. Select "Reopen in container" option in the list on the top of the VS Code window. Wait a minute while Docker container is starting.
 2. Open ```/src/<selected_example>/config/params.xml``` file to set parameters for simulation or just keep it default. Don't forget to save your changes!
-3. Build ROS2 environment:
+3. Build ROS 2 environment:
 ```bash 
 colcon build
 ```
@@ -34,7 +34,7 @@ First of all, you need to download it from the [official website](https://foxglo
 
 Next step is connecting to your ROS node. To perform it, open FoxGlove Studio and select *__Open connection__* option, then select *__Rosbridge__* option. Check the *__WebSocket URL__* field on the right of the window, it should contain ```ws://localhost:9090```. Now we are almost ready to go!
 
-Last step is configuring the layout of FoxGlove. Navigate to the third tab on the left panel, and choose __*Plot*__ option. Each example has its unique ros2 publisher, so it's necessary to set Message paths in FoxGlove in advance. There are two ways to do it: using prepared layout file or manualy.
+Last step is configuring the layout of FoxGlove. Navigate to the third tab on the left panel, and choose __*Plot*__ option. Each example has its unique ROS 2 publisher, so it's necessary to set Message paths in FoxGlove in advance. There are two ways to do it: using prepared layout file or manualy.
 
 <details>
   <summary>To use prepared layout</summary>
@@ -54,7 +54,7 @@ OR
 
 1. For Poliastro_simple_orbit: '/poliastro_simple_orbit/state.data'. Set '/poliastro_simple_orbit/state.data[0]' as Message path in 'Series' tab and '/poliastro_simple_orbit/state.data[1]' as Message path in the 'X Axis' tab. This will provide a plot of orbit. 
 2. For Poliastro_maneuver: '/Poliastro_maneuver/state.data'. Set '/poliastro_maneuver/state.data[0]' as Message path in 'Series' tab and '/Poliastro_maneuver/state.data[1]' as Message path in the 'X Axis' tab. This will provide full Hohmann maneuver including initial and final orbits.
-3. For Poliastro_atmo_drag: '/Poliastro_atmo_drag/state.data'. Set '/Poliastro_atmo_drag/state.data[0]' as Message path in 'Series' tab and '/Poliastro_atmo_drag/state.data[1]' as Message path in the 'X Axis' tab. This will provide raw orbit data, and '/poliastro_atmo_drag/res.data' will provide total flight time before reaching surface. Although the best way to process simulation results is Citros notebook.
+3. For Poliastro_atmo_drag: '/Poliastro_atmo_drag/state.data'. Set '/Poliastro_atmo_drag/state.data[0]' as Message path in 'Series' tab and '/Poliastro_atmo_drag/state.data[1]' as Message path in the 'X Axis' tab. This will provide raw orbit data, and '/poliastro_atmo_drag/res.data' will provide total flight time before reaching surface. Although the best way to process simulation results is CITROS notebook.
 </details>
 <br>
 
@@ -62,37 +62,37 @@ OR
 # Run 🚀
 1. Go back to the VS Code.
 2. Prepare your FoxGlove studio (previous step, if you haven't done it yet).
-3. Launch selected ROS2 package:
+3. Launch selected ROS 2 package:
 ```bash 
 ros2 launch <selected_example> launch.py
 ```
 4. Watch the FoxGlove plot built from results!
 
-# Citros usage 🛸
-Although you can get simulation results using FoxGlove, the best way to work with such simulations and process the results is Citros! With its power, it is possible to create complex data processing scenarios, including the construction of more complex graphs, mathematical analysis and other high-level processing methods.
+# CITROS usage 🛸
+Although you can get simulation results using FoxGlove, the best way to work with such simulations and process the results is CITROS! With its power, it is possible to create complex data processing scenarios, including the construction of more complex graphs, mathematical analysis and other high-level processing methods.
 
-## Citros integration
+## CITROS integration
 1. Build Docker image:
 ```bash
 docker build -t poliastro .
 # OR *** when building from MAC M1 chip add FROM --platform=linux/amd64 ***
 docker buildx build --platform linux/amd64 -t poliastro .   
 ```
-2. Login to Citros
+2. Login to CITROS
  ```bash
 citros login
 citros docker-login
 ```
-3. Tag your project and push it into Citros cloud
+3. Tag your project and push it into CITROS cloud
  ```bash
 docker tag spiceypy us-central1-docker.pkg.dev/citros/lulav/poliastro
 docker push us-central1-docker.pkg.dev/citros/lulav/poliastro
 ```
-## Citros examples
-Some examples of data analysis and plots from Citros Notebooks:
+## CITROS examples
+Some examples of data analysis and plots from CITROS Notebooks:
 
-![png](/docs/img/citros0.png "Citros example")
-![png](/docs/img/citros1.png "Citros example")
+![png](/docs/img/citros0.png "CITROS example")
+![png](/docs/img/citros1.png "CITROS example")
 # Extras
 
 ![gif](/docs/img/main.gif "Maneuver example")
