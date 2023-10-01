@@ -27,7 +27,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive  && apt-get install -y  --n
     ros-humble-rosbridge-suite \    
     && rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m pip install poliastro
+RUN pip install poliastro
 
 RUN sudo apt-get update && apt-get install -y \
     ros-$ROS_DISTRO-rosbag2-storage-mcap \
