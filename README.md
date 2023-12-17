@@ -1,15 +1,6 @@
----
-slug: Poliastro example using CITROS
-title: Poliastro example using CITROS
-authors: [gtep]
-tags: [CITROS]
----
-
-Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).
-
 ## Example overview 🌐 
 
-![jpg](img/img0.jpg "https://images.nasa.gov/details/0202375")
+![jpg](/docs/img/img0.jpg "https://images.nasa.gov/details/0202375")
 
 This project contains three simple examples using Poliastro lib for Python 3:
 1. `Poliastro_simple_orbit`. It returns vessel orbital coordinates around Earth between time bounds from input apoapsis and periapsis altitudes. The result is an ephemerides of orbit (actually a part of it between given time bounds) with zero right ascension of the ascending node, argument of the pericenter and true anomaly for simplicity. 
@@ -125,7 +116,7 @@ You can use prepared layout: Go to the ```Layout``` tab on the top panel, then c
 
 :::
 
-![png](img/atmo_drag0.png "FoxGlove example")
+![png](/docs/img/atmo_drag0.png "FoxGlove example")
 
 :::tip
 
@@ -160,7 +151,7 @@ You can use Visual Code Tasks: simply press ```Alt+T``` and select the task you 
 
 :::
 
-![gif](img/main.gif "FoxGlove example")
+![gif](/docs/img/main.gif "FoxGlove example")
 
 ## CITROS usage 🛸
 Although you can get simulation results using FoxGlove, the best way to work with such simulations and process the results is CITROS! With its power, it is possible to create complex data processing scenarios, including the construction of more complex graphs, mathematical analysis and other high-level processing methods.
@@ -224,7 +215,7 @@ Navigate to the Run by clicking on it in the table:
 * The main part of this page is a simulation's log. Here you can find all the logging information from all levels: from your code logs up to the CITROS system information.
 * The right part of the page provides additional information about Events: the main stages of the simulation run.
 
-![png](img/citros0.png "CITROS example")
+![png](/docs/img/citros0.png "CITROS example")
 
 #### Working with integrated Jupiter Notebooks
 CITROS Web provides powerfull data analisys package, which is comprehensive solution for data query, analysis and visualization. With its extensive features, you can quickly and easily extract valuable insights from your data. To use it, the Jupiter Notebook support is built-in. 
@@ -232,9 +223,9 @@ Navigate to our project ```Code``` page, open the Notebooks folder and click on 
 
 You can find all the data analisys package [here](https://citros.io/doc/docs_data_analysis).
 
-![png](img/citros1.png "CITROS example")
+![png](/docs/img/citros1.png "CITROS example")
 
 ## Extras
 ### FoxGlove examples
 
-![png](img/maneuver.png "FoxGlove example")
+![png](/docs/img/maneuver.png "FoxGlove example")
