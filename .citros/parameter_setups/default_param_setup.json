@@ -1,0 +1,42 @@
+{
+    "packages": {
+        "poliastro_atmo_drag": {
+            "poliastro_atmo_drag": {
+                "ros__parameters": {
+                    "a": 6550.85876692,
+                    "argp": 0.0,
+                    "c_d": {
+                        "function": "numpy.random.uniform",
+                        "args": [2, 4]
+                    },
+                    "earth_r": 6378.1366,
+                    "ecc": 0.0,
+                    "inc": 0.0,
+                    "nu": 0.0,
+                    "publish_freq": 10.0,
+                    "raan": 0.0,
+                    "t_limit": 1.0
+                }
+            }
+        },
+        "poliastro_maneuver": {
+            "poliastro_maneuver": {
+                "ros__parameters": {
+                    "r_final": 1000.0,
+                    "r_init": 100.0
+                }
+            }
+        },
+        "poliastro_simple_orbit": {
+            "poliastro_simple_orbit": {
+                "ros__parameters": {
+                    "apo_r": 10000.0,
+                    "finish_t": "2022-01-01 05:00",
+                    "peri_r": 10000.0,
+                    "publish_freq": 10.0,
+                    "start_t": "2022-01-01 00:00"
+                }
+            }
+        }
+    }
+}

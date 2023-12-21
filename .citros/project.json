@@ -1,0 +1,197 @@
+{
+    "citros_cli_version": "0.1.7",
+    "cover": "",
+    "description": "",
+    "git": "git@github.com:citros-garden/poliastro.git",
+    "is_active": true,
+    "launches": [],
+    "packages": [
+        {
+            "cover": "",
+            "description": "Simple example with atmospheric drag using poliastro",
+            "git": "",
+            "launches": [
+                {
+                    "description": "",
+                    "name": "poliastro_atmo_drag.launch.py",
+                    "path": "src/poliastro_atmo_drag/launch/poliastro_atmo_drag.launch.py"
+                }
+            ],
+            "maintainer": "ros",
+            "maintainer_email": "gleb@lulav.space",
+            "name": "poliastro_atmo_drag",
+            "nodes": [
+                {
+                    "entry_point": "poliastro_atmo_drag.poliastro_atmo_drag:main",
+                    "name": "poliastro_atmo_drag",
+                    "parameters": [
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "earth_r",
+                            "parameterType": "float",
+                            "value": 6378.1366
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "a",
+                            "parameterType": "float",
+                            "value": 6550.85876692
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "ecc",
+                            "parameterType": "float",
+                            "value": 0.0
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "inc",
+                            "parameterType": "float",
+                            "value": 0.0
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "raan",
+                            "parameterType": "float",
+                            "value": 0.0
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "argp",
+                            "parameterType": "float",
+                            "value": 0.0
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "nu",
+                            "parameterType": "float",
+                            "value": 0.0
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "c_d",
+                            "parameterType": "float",
+                            "value": 2.2
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "t_limit",
+                            "parameterType": "float",
+                            "value": 1.0
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "publish_freq",
+                            "parameterType": "float",
+                            "value": 10.0
+                        }
+                    ],
+                    "path": "src/poliastro_atmo_drag/poliastro_atmo_drag/poliastro_atmo_drag.py"
+                }
+            ],
+            "package_xml": "src/poliastro_atmo_drag/package.xml",
+            "parameters": {},
+            "path": "src/poliastro_atmo_drag",
+            "setup_py": "src/poliastro_atmo_drag/setup.py"
+        },
+        {
+            "cover": "",
+            "description": "Simple Hohmann maneuver example using poliastro",
+            "git": "",
+            "launches": [
+                {
+                    "description": "",
+                    "name": "poliastro_maneuver.launch.py",
+                    "path": "src/poliastro_maneuver/launch/poliastro_maneuver.launch.py"
+                }
+            ],
+            "maintainer": "ros",
+            "maintainer_email": "gleb@lulav.space",
+            "name": "poliastro_maneuver",
+            "nodes": [
+                {
+                    "entry_point": "poliastro_maneuver.poliastro_maneuver:main",
+                    "name": "poliastro_maneuver",
+                    "parameters": [
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "r_init",
+                            "parameterType": "float",
+                            "value": 100.0
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "r_final",
+                            "parameterType": "float",
+                            "value": 1000.0
+                        }
+                    ],
+                    "path": "src/poliastro_maneuver/poliastro_maneuver/poliastro_maneuver.py"
+                }
+            ],
+            "package_xml": "src/poliastro_maneuver/package.xml",
+            "parameters": {},
+            "path": "src/poliastro_maneuver",
+            "setup_py": "src/poliastro_maneuver/setup.py"
+        },
+        {
+            "cover": "",
+            "description": "Simple orbit plotting using poliastro",
+            "git": "",
+            "launches": [
+                {
+                    "description": "",
+                    "name": "poliastro_simple_orbit.launch.py",
+                    "path": "src/poliastro_simple_orbit/launch/poliastro_simple_orbit.launch.py"
+                }
+            ],
+            "maintainer": "ros",
+            "maintainer_email": "gleb@lulav.space",
+            "name": "poliastro_simple_orbit",
+            "nodes": [
+                {
+                    "entry_point": "poliastro_simple_orbit.poliastro_simple_orbit:main",
+                    "name": "poliastro_simple_orbit",
+                    "parameters": [
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "apo_r",
+                            "parameterType": "float",
+                            "value": 10000.0
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "peri_r",
+                            "parameterType": "float",
+                            "value": 10000.0
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "start_t",
+                            "parameterType": "str",
+                            "value": "2022-01-01 00:00"
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "finish_t",
+                            "parameterType": "str",
+                            "value": "2022-01-01 05:00"
+                        },
+                        {
+                            "description": "Parameter loaded from config.yaml",
+                            "name": "publish_freq",
+                            "parameterType": "float",
+                            "value": 10.0
+                        }
+                    ],
+                    "path": "src/poliastro_simple_orbit/poliastro_simple_orbit/poliastro_simple_orbit.py"
+                }
+            ],
+            "package_xml": "src/poliastro_simple_orbit/package.xml",
+            "parameters": {},
+            "path": "src/poliastro_simple_orbit",
+            "setup_py": "src/poliastro_simple_orbit/setup.py"
+        }
+    ],
+    "tags": []
+}
