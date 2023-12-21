@@ -1,0 +1,14 @@
+{
+    "CPU": 2,
+    "GPU": 0,
+    "MEM": 265,
+    "description": "Default simulation. Change the values according to your needs.",
+    "id": "64a137c7-e281-47f7-92c1-7735a759c855",
+    "launch": {
+        "file": "poliastro_simple_orbit.launch.py",
+        "package": "poliastro_simple_orbit"
+    },
+    "parameter_setup": "default_param_setup.json",
+    "storage_type": "MCAP",
+    "timeout": 60
+}

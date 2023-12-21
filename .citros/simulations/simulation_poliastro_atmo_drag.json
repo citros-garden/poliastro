@@ -1,0 +1,14 @@
+{
+    "CPU": 4,
+    "GPU": 4,
+    "MEM": 2048,
+    "description": "Default simulation. Change the values according to your needs.",
+    "id": "d3602128-b93d-40a7-8b61-359acdc82f0a",
+    "launch": {
+        "file": "poliastro_atmo_drag.launch.py",
+        "package": "poliastro_atmo_drag"
+    },
+    "parameter_setup": "default_param_setup.json",
+    "storage_type": "MCAP",
+    "timeout": 360
+}
